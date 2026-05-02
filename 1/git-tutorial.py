@@ -9,8 +9,6 @@
 # git checkout -b '브랜치명' == 브랜치 생성
 # git checkout '브랜치명' == 브랜치 접속
 
-
-
 print('git-tutorial')
 
 # 시작전에 로컬과 리모트를 연동을 시켜야한다(터미널상의 자신의 폴더 잘 확인.)
@@ -21,4 +19,3 @@ print('git-tutorial')
 
 # 메인으로는 푸시를 안날리는게 정상
 # git flow개념을 알고
-
