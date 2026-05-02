@@ -37,3 +37,24 @@
 # 7. 'git remote add origin 복사한주소'를 입력하여 원격 저장소 연결
 # 8. 'git branch -M main' 브랜치 이름 설정?
 # 9. 'git push -u origin main' 명령어로 최종 업로드
+
+# # 처음 시작할 때
+# git init
+# git remote add origin 상대방_저장소_주소
+
+# # 이미 다른 곳에 연결되어 있다면 주소 변경
+# git remote set-url origin 상대방_저장소_주소
+
+# ----------------------------------------------------------------------------------
+
+# 공동 작업 방법
+# 1. git pull origin main
+# 명령어를 터미널에 입력하여 깃허브에 올라온 최신 파일을 내 컴퓨터로 저장
+
+# 2. 코드를 수정한 뒤, 'git add .'을 터미널에 입력
+
+# 3. 'git commit -m "황인재 : "내용 추가"' 를 통해 수정한 버전에 이름? 달기
+
+# 4. 'git push origin main' 을 통해 수정한 파일을 전부 깃허브에 업로드
+
+# 5. git push origin 'brunch이름':main
