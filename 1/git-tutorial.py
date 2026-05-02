@@ -9,6 +9,10 @@
 # git checkout -b '브랜치명' == 브랜치 생성
 # git checkout '브랜치명' == 브랜치 접속
 
+# git add . 내 로컬에 작업한것을 커밋에 뭘 담을지 정하는것 .은 전체를 의미
+# git commit -m "내용" 이력 관리
+# git push 원격으로 업로드
+
 print('git-tutorial')
 
 # 시작전에 로컬과 리모트를 연동을 시켜야한다(터미널상의 자신의 폴더 잘 확인.)
