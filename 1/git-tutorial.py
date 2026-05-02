@@ -18,4 +18,10 @@ print('git-tutorial')
 # 덮어쓰기는 왜 되는거임? 메인으로 날리면 다 꼬일수있음...
 
 # 메인으로는 푸시를 안날리는게 정상
-# git flow개념을 알고
+# git flow개념을 알고할 것
+
+# 최신화를 위해 pull 사용
+# git pull 당겨오는것
+# 예외상황
+# git pull -f << 충돌나서 강제로 당긴거.
+# git pull origin main --allow-unrelated-histories
