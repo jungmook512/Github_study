@@ -56,3 +56,5 @@
 # 3. 'git commit -m "황인재 : "내용 추가"' 를 통해 수정한 버전에 이름? 달기
 
 # 4. 'git push origin main' 을 통해 수정한 파일을 전부 깃허브에 업로드
+
+# 5. git push origin 'brunch이름':main
