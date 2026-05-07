@@ -1,0 +1,117 @@
+# 1. finally 블록의 주요 용도는 무엇인가요? c
+# a) 예외를 무시한다.
+# b) 코드의 흐름을 멈춘다.
+# c) 예외 발생 여부와 상관없이 실행된다.
+# d) 예외를 다시 발생시킨다.
+
+
+
+
+# 2. 다음 코드의 실행 결과를 작성하시오
+try:
+    x = int("abc")
+except ValueError:
+    print("ValueError occurred!")
+finally:
+    print("Execution finished.")
+
+# ValueError occurred!
+# Execution finished.
+# 문자열을 정수형으로 바꿀 수 없으므로 ValueError가 발생한다. 그래서 except 절이 실행되고 finally 절은 예외와 상관없이 실행된다.
+
+
+
+# 3. 여러 개의 예외를 한 번에 처리하려면 어떤 문법을 사용하나요?a
+# a) except (TypeError, ValueError):
+# b) except TypeError, ValueError:
+# c) except [TypeError, ValueError]:
+# d) except {TypeError, ValueError}:
+# 토플형식으로 예외를 묶어서 처리할 수 있다.
+
+
+
+# 4. 사용자 정의 예외를 만들기 위해 사용하는 클래스의 기본 부모 클래스는 무엇인가요?
+# a) Error
+# b) BaseException
+# c) Exception
+# d) CustomError
+# c
+# 사용자 정의 예외는 Excecption 클래스를 상속 받는다. BaseException은 최상위 부모 클래스이다. 
+
+
+
+# 5. 람다 함수의 특징으로 올바른 것은 무엇인가요?b
+# a) 여러 줄로 작성할 수 있다.
+# b) 이름이 없는 익명 함수이다.
+# c) 반드시 return 키워드를 사용해야 한다.
+# d) 함수 외부에서만 사용할 수 있다.
+
+
+
+
+
+# 6. 예외처리 문법을 사용하여 x = 10 / 0 연산을 수행했을 때, 다음과 같은 실행 결과를 출력하는 프로그램을 작성하시오.
+# Cannot divide by zero!
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+
+
+
+
+
+
+
+
+# 7. raise 문법을 활용하여 KeyError로 다음 내용을 출력하도록 예외를 발생시키는 코드를 작성하시오.
+# Key is missing!
+
+try:
+    raise KeyError
+except KeyError:
+    print("Key is missing!")
+
+
+
+# 8. 람다(lambda)를 사용하여 x와 y값을 입력 받고 두 변수의 값을 더하여 add 변수에 할당하는 프로그램을 작성하시오. 그리고 인수로 3과 5를 입력 받는 add 함수를 호출하고 결과값을 출력하시오.
+add = lambda x, y:x+y
+print(add(3, 5))
+
+
+
+
+# 9. 문자열 PER (Price to Earning Ratio) 값을 실수로 변환할 때 에러가 발생합니다. 예외처리를 통해 에러가 발생하는 PER은 0으로 출력하세요.
+per = ["10.31", "", "8.00"]
+for i in per:
+    print(float(i))
+per = ["10.31", "", "8.00"]
+
+for i in per:
+    try:
+        print(float(i))
+    except ValueError:
+        print(0.0)
+# 출력결과
+10.31
+0.0
+8.0
+
+
+
+# 10. 다음과 같이 리스트가 주어져 있을 때, 
+# numbers = [10, 20, 30]
+# 사용자로부터 인덱스를 입력 받아 해당 위치의 원소를 출력하는 프로그램을 작성하시오.
+# 범위를 벗어난 인덱스를 입력할 경우 IndexError를 처리하여 
+# "잘못된 인덱스입니다." 라는 메시지를 출력하시오.
+# 또한 숫자가 아닌 값이 입력으로 들어오는 경우도 예외 처리하시오.
+
+numbers = [10, 20, 30]
+
+try:
+    idx = int(input("인덱스 번호를 입력하시오."))
+    print(numbers[idx])
+except IndexError:
+    print("잘못된 인덱스입니다.")
+except ValueError:
+    print("숫자로 입력하시오.")
